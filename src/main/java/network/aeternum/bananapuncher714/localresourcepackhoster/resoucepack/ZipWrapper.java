@@ -97,7 +97,7 @@ public class ZipWrapper implements Closeable {
 	
 	private FileSystem getZipfs() throws IOException {
 		if ( zipfs == null ) {
-			zipfs = FileSystems.newFileSystem( Paths.get( zipFile.getAbsolutePath() ), null );
+			zipfs = FileSystems.newFileSystem(Paths.get(zipFile.getAbsolutePath()), (java.lang.ClassLoader)null);
 		}
 		return zipfs;
 	}
